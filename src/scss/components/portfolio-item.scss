@@ -1,0 +1,78 @@
+@import '../base/variables';
+
+.portfolio-item {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  background-color: $primary-light-color;
+
+  @media (max-width: 575px) {
+    display: block;
+  }
+
+  &__text {
+    width: 50%;
+    padding: 40px;
+    text-align: center;
+
+    .divider {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 575px) {
+      width: 100%;
+      padding: 100px 40px;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    align-self: stretch;
+
+    @media (max-width: 575px) {
+      width: 100%;
+      height: 400px;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      padding: 15px;
+
+      span {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: rgba($primary-color, 0.9);
+        color: $primary-light-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        transform: scale(0.8);
+        transition: opacity .3s ease, transform .3s ease;
+        backface-visibility: hidden;
+      }
+    }
+
+    &:hover {
+
+      a span {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &:nth-child(2n+2) {
+
+    .portfolio-item__text {
+      order: 2;
+    }
+  }
+}

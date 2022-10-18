@@ -1,0 +1,9 @@
+@import '../base/variables';
+
+.section {
+  padding: 100px 0;
+
+  &--primary-bg {
+    background-color: $primary-bg-color;
+  }
+}

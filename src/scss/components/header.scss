@@ -1,0 +1,12 @@
+@import '../base/variables';
+
+header {
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+}

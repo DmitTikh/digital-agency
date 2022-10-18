@@ -1,0 +1,66 @@
+@import '../base/variables';
+
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+
+  &--light {
+
+    .nav__item {
+
+      a {
+        color: $primary-light-color;
+      }
+    }
+  }
+
+  &--lg {
+    
+    .nav__item {
+
+      a {
+        font-size: 16px;
+        text-transform: none;
+      }
+    }
+  }
+
+  &__item {
+    margin-left: 30px;
+
+    a {
+      display: block;
+      font-size: 12px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $primary-text-color;
+      letter-spacing: 1px;
+      position: relative;
+      padding: 5px 0;
+      transition: color .3s ease;
+      backface-visibility: hidden;
+
+      &::after {
+        content: '';
+        width: 0px;
+        height: 1px;
+        background-color: $primary-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width .3s ease;
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

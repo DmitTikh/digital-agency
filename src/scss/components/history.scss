@@ -1,0 +1,14 @@
+@import '../base/variables';
+
+.history {
+  
+  &__inner {
+    border: 15px solid $primary-border-color;
+    padding: 60px;
+
+    @media (max-width: 480px) {
+      border-width: 10px;
+      padding: 30px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../base/variables';
+
+.services {
+
+  &__head {
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}
